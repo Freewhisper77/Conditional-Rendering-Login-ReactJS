@@ -14,7 +14,7 @@ let isLoggedIn = false; // false OR true
 function App() {
   return (
     <div className="container">
-      {isLoggedIn === true ? <h1>Hello</h1> : <Login />}
+      {isLoggedIn ? <h1>Hello</h1> : <Login />}
     </div>
   );
 }
