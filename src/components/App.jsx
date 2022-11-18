@@ -15,7 +15,10 @@ const currentHour = new Date().getHours();
 function App() {
   return (
     <div className="container">
+      {/*JS*/}
       {currentHour > 12 ? <h1>Why U still work?</h1> : null}
+      {/*React/JSX*/}
+      {currentHour > 12 && <h1>Why U still work?</h1>}
       {isLoggedIn ? <h1>Hello</h1> : <Login />}
     </div>
   );
