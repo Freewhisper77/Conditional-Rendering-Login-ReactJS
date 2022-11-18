@@ -6,19 +6,15 @@ import Login from "./Login";
 // Create a “Login” component for the form
 // Create an “Input” component for the input
 
-let isLoggedIn = true; // false OR true
 
-function renderConditional() {
-    if (isLoggedIn) {
-        return <Login />;
-    } else {
-        return <h1>Hello</h1>;
-    }
-}
+// Use Ternary Operator
+
+let isLoggedIn = false; // false OR true
+
 function App() {
   return (
     <div className="container">
-        {renderConditional()}
+      {isLoggedIn === true ? <h1>Hello</h1> : <Login />}
     </div>
   );
 }
