@@ -1,20 +1,18 @@
 import React from "react";
+import Login from "./Login";
 //When user is loggedIn => just show <h1> in the page
 //When user isn't loggedIn => just show <form> in the page
 
-let isLoggedIn = false; // false OR true
+// Create a “Login” component for the form
+// Create an “Input” component for the input
+
+let isLoggedIn = true; // false OR true
 
 function renderConditional() {
     if (isLoggedIn) {
-        return (
-            <form className="form">
-                <input type="text" placeholder="Username" />
-                <input type="password" placeholder="Password" />
-                <button type="submit">Login</button>
-            </form>
-        )
+        return <Login />;
     } else {
-        return (<h1>Hello</h1>);
+        return <h1>Hello</h1>;
     }
 }
 function App() {
