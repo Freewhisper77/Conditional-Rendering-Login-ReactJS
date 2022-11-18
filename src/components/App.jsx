@@ -10,10 +10,12 @@ import Login from "./Login";
 // Use Ternary Operator
 
 let isLoggedIn = false; // false OR true
+const currentHour = new Date().getHours();
 
 function App() {
   return (
     <div className="container">
+      {currentHour > 12 ? <h1>Why U still work?</h1> : null}
       {isLoggedIn ? <h1>Hello</h1> : <Login />}
     </div>
   );
